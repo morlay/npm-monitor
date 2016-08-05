@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/ --fix",
+    "build": "babel src/ --ignore __*__ --out-dir lib/",
+    "mocha": "mocha --timeout 20000000 -R dot --compilers .:babel-core/register src/__tests__/*.spec.js",
+    "morlay": "HOST=morlay npm run mocha",
+    "test": "npm run lint && npm run mocha"
+  },
+  "author": "Morlay Null <morlay.null@gmail.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "atob": "2.0.x",
+    "config": "1.21.x",
+    "github": "2.4.x",
+    "js-yaml": "3.6.x",
+    "json-stringify-safe": "5.0.1",
+    "lodash": "4.14.x",
+    "qs": "6.2.x"
+  },
+  "devDependencies": {
+    "@morlay/babel-preset": "1.0.x",
+    "@morlay/eslint-config": "1.0.x",
+    "@morlay/tests": "1.0.x",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.11.x",
+    "lowdb": "0.13.x"
+  }
+}
